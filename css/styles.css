@@ -103,9 +103,11 @@ nav {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, rgba(5, 1, 74, 0.9) 0%, rgba(5, 1, 74, 0.7) 100%), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(5, 1, 74, 0.85) 0%, rgba(5, 1, 74, 0.7) 100%), url('https://images.unsplash.com/photo-1571008887538-b36bb32f4571?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
     color: var(--white);
     margin-top: 70px;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero h1 {
