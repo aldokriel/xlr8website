@@ -1,0 +1,451 @@
+:root {
+  --ink: #1c1a17;
+  --ink-soft: #4a463e;
+  --paper: #f0f1ec;
+  --panel: #e4e5de;
+  --track: #b23a2e;
+  --brass: #a9832e;
+  --line: rgba(28, 26, 23, 0.16);
+  --max: 960px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; background: #ffffff; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+  line-height: 0.98;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+h1 { font-size: clamp(2.6rem, 6vw, 4.6rem); font-weight: 800; }
+h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); }
+h3 { font-size: 1.35rem; font-weight: 600; }
+
+p { margin: 0 0 1em; max-width: 62ch; color: var(--ink-soft); }
+
+a { color: inherit; }
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Header */
+header.site {
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.wordmark {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.wordmark span { color: var(--track); }
+
+.navlinks {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+}
+
+.navlinks a:hover,
+.navlinks a.active {
+  color: var(--ink);
+  border-bottom-color: var(--track);
+}
+
+/* Hero */
+.hero {
+  padding: 88px 0 64px;
+}
+
+.hero p.lede {
+  font-size: 1.15rem;
+  max-width: 46ch;
+}
+
+.cta-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 3px;
+  border: 1px solid var(--ink);
+}
+
+.btn.primary {
+  background: var(--track);
+  border-color: var(--track);
+  color: #fdf9f4;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+/* Readout panel — decorative, ties hero to the speed-reading product */
+.readout {
+  background: var(--ink);
+  color: #f0f1ec;
+  padding: 32px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.readout .label {
+  font-size: 0.8rem;
+  color: #b7b3a8;
+  margin-bottom: 6px;
+}
+
+.readout .digits {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #f0f1ec;
+  line-height: 1;
+}
+
+.readout .digits .unit {
+  font-size: 1.1rem;
+  color: var(--brass);
+  margin-left: 8px;
+}
+
+.readout .sub {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.14);
+  font-size: 0.85rem;
+  color: #b7b3a8;
+}
+
+/* Lane divider */
+.lane {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+section { padding: 64px 0; }
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.kicker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--track);
+}
+
+/* Pillars / three-column */
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.pillar .num {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--brass);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Product feature block */
+.product-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.spec-list li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  font-size: 0.92rem;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.spec-list .k {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  text-transform: none;
+}
+
+/* Numbered steps (How it works) */
+.steps-list {
+  list-style: none;
+  counter-reset: step;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.steps-list li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 14px;
+  align-items: baseline;
+}
+
+.steps-list li::before {
+  content: counter(step);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--brass);
+  font-size: 1rem;
+}
+
+/* Feature checklist */
+.feature-grid {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 28px;
+}
+
+.feature-grid li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
+
+/* Numbered steps (How it works) end */
+
+.roadmap-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+
+.roadmap-row:last-child { border-bottom: 1px solid var(--line); }
+
+.roadmap-row .status {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--track);
+}
+
+/* Contact panel — single consolidated block */
+.contact-panel {
+  margin-top: 36px;
+  border: 1px solid var(--line);
+  padding: 32px;
+  max-width: 620px;
+}
+
+.contact-panel .spec-list {
+  margin: 0 0 28px;
+}
+
+.contact-panel .spec-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-panel .spec-list li {
+  grid-template-columns: 170px 1fr;
+}
+
+/* Audience cards (contact) */
+.audience {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 36px;
+}
+
+.audience > div {
+  background: var(--paper);
+  padding: 28px;
+}
+
+.audience h3 { margin-bottom: 8px; }
+
+.audience a.mailto {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.88rem;
+  color: var(--track);
+  text-decoration: none;
+  border-bottom: 1px solid var(--track);
+}
+
+/* Footer */
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 32px 0;
+  margin-top: 40px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--track);
+}
+
+/* Floating WhatsApp chat link */
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #1c1a17;
+  color: #f0f1ec;
+  text-decoration: none;
+  padding: 12px 18px 12px 14px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(28, 26, 23, 0.28);
+  z-index: 50;
+}
+
+.whatsapp-float:hover {
+  background: var(--track);
+}
+
+.whatsapp-float svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float span { display: none; }
+  .whatsapp-float {
+    padding: 12px;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 760px) {
+  .product-feature { grid-template-columns: 1fr; }
+  .grid3, .grid4, .audience { grid-template-columns: 1fr; }
+  .roadmap-row { grid-template-columns: 1fr; }
+  .navlinks { gap: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
