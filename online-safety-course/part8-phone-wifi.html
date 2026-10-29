@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part 8: Your Phone, Wi-Fi and Devices</title><style>
+:root{--bg:#f7f7f4;--card:#fff;--ink:#1d2433;--muted:#5b6475;--line:#e3e4df;--accent:#1f6feb;--accent-soft:#e8f0fe;--ok:#1a7f37;--ok-soft:#e6f4ea;--bad:#c62828;--bad-soft:#fdecea;--warn:#9a6700}
+@media (prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1a1f27;--ink:#e8eaee;--muted:#a3abba;--line:#2b323d;--accent:#6ea8ff;--accent-soft:#1e2a3d;--ok:#4ac26b;--ok-soft:#18301f;--bad:#ff7b72;--bad-soft:#3a1d1b;--warn:#e3b341}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 64px}
+a{color:var(--accent)}h1{font-size:1.8rem;line-height:1.2;margin:.2em 0 .3em}h2{font-size:1.25rem;margin:1.6em 0 .5em}
+.kicker{color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:12px 0}
+.rules li{margin:.45em 0}.rules{padding-left:1.2em}
+.videos{list-style:none;padding:0;margin:0}.videos li{padding:10px 0;border-bottom:1px solid var(--line)}.videos li:last-child{border:0}
+.videos .src{color:var(--muted);font-size:.88rem}
+.check{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:.95rem}
+.q{margin:18px 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.q h3{margin:0 0 10px;font-size:1.02rem}.q label{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:8px;cursor:pointer}
+.q label:hover{background:var(--accent-soft)}.q.right{border-color:var(--ok);background:var(--ok-soft)}.q.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.q .why{margin-top:8px;font-size:.93rem}.q .why b{font-weight:600}
+button{font:inherit;border:0;border-radius:10px;padding:12px 20px;background:var(--accent);color:#fff;cursor:pointer;font-weight:600}
+button.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button:disabled{opacity:.5;cursor:not-allowed}
+input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%;max-width:320px}
+.result{padding:18px 20px;border-radius:12px;margin:16px 0}.result.pass{background:var(--ok-soft);border:2px solid var(--ok)}.result.fail{background:var(--bad-soft);border:2px solid var(--bad)}
+.score{font-size:2rem;font-weight:700}
+.cert{border:3px double var(--ok);border-radius:12px;padding:20px;text-align:center;background:var(--card);margin-top:12px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:32px;flex-wrap:wrap}
+.parts{display:grid;gap:12px}.part{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit}
+.num{flex:0 0 40px;height:40px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:700}
+.status{margin-left:auto;font-size:.85rem;color:var(--muted);white-space:nowrap}.status.done{color:var(--ok);font-weight:600}
+.note{color:var(--muted);font-size:.92rem}
+@media print{button,.nav{display:none}}
+</style></head><body><div class="wrap">
+<div class="kicker"><a href="index.html">Online Safety Course</a> &middot; Part 8 of 10</div>
+<h1>Your Phone, Wi-Fi and Devices</h1>
+<p>Your phone holds your messages, photos, accounts and sometimes payment apps. Whoever holds it unlocked can act as you. Free Wi-Fi is handy but can be faked. A few habits keep both safe.</p>
+<h2>The rules</h2><div class="card"><ol class="rules"><li>Don&#x27;t hand your unlocked phone to a stranger. If someone needs a call, point them to staff, security or the police, or make the call yourself on speaker.</li><li>Never lend your phone, SIM card, accounts or bank account to anyone, not even friends.</li><li>Lock your phone with a PIN or Face/Touch ID and a short auto-lock.</li><li>On public Wi-Fi: check the network name with staff, avoid logging in or paying, forget the network afterwards, and turn off auto-join.</li><li>Set AirDrop and Bluetooth to contacts only or off; install apps only from the official app store; keep your phone updated.</li><li>Keep Find My (iPhone) or Find My Device (Android) switched on.</li></ol></div>
+<h2>Watch and read</h2><div class="card"><ul class="videos"><li><a href="https://cyberdefender.hk/en-us/public_wifi_safety/" target="_blank" rel="noopener">Public Wi-Fi safety</a><div class="src">CyberDefender.hk (HK Police)</div></li><li><a href="https://infosec.gov.hk/en/best-practices/person/tips-on-using-public-wi-fi" target="_blank" rel="noopener">Tips on using public Wi-Fi</a><div class="src">InfoSec.gov.hk (HK Government)</div></li><li><a href="https://www.adcc.gov.hk/en-hk/home.html" target="_blank" rel="noopener">Latest scam alerts</a><div class="src">Anti-Deception Coordination Centre (HK Police)</div></li><li><a href="https://beinternetawesome.withgoogle.com/en_us/interland" target="_blank" rel="noopener">Interland: Tower of Treasure (passwords)</a><div class="src">Google Be Internet Awesome</div></li></ul>
+<label class="check"><input type="checkbox" id="watched"> I have read the rules and watched the videos (with a parent if possible).</label></div>
+<h2>Quiz</h2>
+<div class="card"><p class="note">20 random questions from a bank of 25. You need <b>80% (16/20)</b> to pass. If you don't pass, you redo it with a new set of questions.</p><button id="start">Start the quiz</button></div>
+<div id="quizArea" hidden>
+<div class="card"><label for="name"><b>Your name</b></label><br><input type="text" id="name" autocomplete="off"></div>
+<div id="quiz"></div><button id="submit">Check my answers</button><div id="result"></div></div>
+<div class="nav"><a href="part7-dark-corners.html">&larr; Part 7: Dark Corners: Extreme Groups, &#x27;Challenges&#x27; and the Dark Web</a><a href="part9-deepfakes.html">Part 9: Deepfakes and AI Fakes &rarr;</a></div>
+</div><script>const PART={"slug": "part8-phone-wifi", "title": "Your Phone, Wi-Fi and Devices"};const BANK=[{"q": "A stranger asks to borrow your phone to make a call. What do you do?", "o": ["Don't hand it over; point them to staff or security, or call for them on speaker", "Hand it over", "Hand it over unlocked", "Give them your passcode"], "why": "Your phone can be grabbed or misused in seconds."}, {"q": "Why is handing your unlocked phone to a stranger risky?", "o": ["They can run off, read messages, or send money from payment apps", "It's not risky", "They might drop it", "It uses your data"], "why": "Unlocked phones open your accounts and payment apps."}, {"q": "In a 2026 Hong Kong case near Whampoa MTR, what reportedly happened after strangers grabbed a man's phone?", "o": ["They sent money from his mobile payment app to themselves", "They took a selfie", "They gave it back", "They called the police"], "why": "It started with a request for help and ended with money taken from his AlipayHK account."}, {"q": "A friend wants your unlocked phone to post something 'funny' from your account. What do you do?", "o": ["Say no: anything posted looks like it came from you", "Let them", "Let them if it's funny", "Let them if you check after"], "why": "You're responsible for what your accounts post."}, {"q": "Which lock screen setup is best?", "o": ["A PIN or Face/Touch ID with a short auto-lock", "No lock", "A pattern everyone has seen", "1234"], "why": "A locked phone protects everything inside it."}, {"q": "You're leaving your phone on your desk at school for a minute. What should you do?", "o": ["Lock it", "Leave it open", "Put it face down unlocked", "Ask someone to watch it unlocked"], "why": "A minute is enough for someone to post or read messages."}, {"q": "A mall has two Wi-Fi networks: 'MallFreeWiFi' and 'MallFreeWiFi_2'. What do you do?", "o": ["Check the real name with staff or signs before joining", "Join the strongest one", "Join both", "Join the one without a password"], "why": "HK Police warn that hackers copy network names to trick people."}, {"q": "Should you log in to your bank or Instagram on free public Wi-Fi?", "o": ["Avoid it; use mobile data instead", "Yes, it's fine", "Yes, if it's fast", "Yes, at the airport"], "why": "Sensitive logins are safer on mobile data."}, {"q": "After using public Wi-Fi, what should you do?", "o": ["Forget the network and turn off auto-join", "Leave it saved", "Share the password", "Nothing"], "why": "Auto-join can connect you to fakes with the same name later."}, {"q": "A Wi-Fi network has no password at all. What does that mean?", "o": ["It's unencrypted: avoid anything private on it", "It's the safest", "It's official", "It's faster"], "why": "Open networks can let others see your traffic."}, {"q": "Your phone says an update is ready. What should you do?", "o": ["Install it soon: updates fix security holes", "Ignore it forever", "Wait a year", "Only update games"], "why": "Updates close gaps attackers use."}, {"q": "Where should you install apps from?", "o": ["The official App Store or Google Play only", "Any website", "Links in DMs", "Files friends send"], "why": "Apps from outside the stores can contain malware."}, {"q": "What's the safest AirDrop setting when you're out?", "o": ["Receiving off or contacts only", "Everyone, always", "Everyone for 10 minutes all day", "It doesn't matter"], "why": "Strangers use AirDrop to send unwanted images."}, {"q": "On the MTR, a stranger AirDrops you an image. What do you do?", "o": ["Decline it, and tell an adult if it was inappropriate", "Accept it", "Accept and forward it", "AirDrop something back"], "why": "Declining keeps it off your phone."}, {"q": "Someone asks to 'borrow' your SIM card or phone number to register an account. What do you do?", "o": ["Refuse: it could be used for crimes in your name", "Lend it for a day", "Lend it for money", "Lend it to a friend of a friend"], "why": "Accounts tied to your number lead back to you."}, {"q": "Someone offers you money to let them use your bank account or FPS. What is it?", "o": ["Money laundering: a crime that can get you arrested", "Easy cash", "A part-time job", "A favour"], "why": "HK Police warn students against lending accounts to anyone."}, {"q": "Is it safe to charge from a random USB port or a cable a stranger offers?", "o": ["Use your own charger in a wall socket where possible", "Yes, always", "Yes, if it's fast", "Yes, at the airport"], "why": "Unknown ports and cables can carry data, not just power."}, {"q": "When should Bluetooth be on?", "o": ["When you're using it; off otherwise", "Always", "Never", "Only at night"], "why": "Less exposure when it's off."}, {"q": "Why keep Find My (iPhone) or Find My Device (Android) on?", "o": ["So a lost phone can be located, locked or wiped", "To track friends", "To save battery", "It isn't useful"], "why": "It protects your data if the phone is lost or stolen."}, {"q": "Your phone is lost or stolen. First steps?", "o": ["Tell a parent, lock or locate it remotely, change key passwords", "Wait and hope", "Buy a new one", "Post about it"], "why": "Speed matters for protecting your accounts."}, {"q": "Someone stands close behind you while you type your PIN. What do you do?", "o": ["Cover the screen or wait", "Type faster", "Say the PIN out loud", "Ignore it"], "why": "Watching someone type, called shoulder-surfing, is a common way to steal PINs."}, {"q": "A pop-up says 'Your phone has a virus! Call this number.' What is it?", "o": ["Fake: close it and don't call", "A real warning", "An Apple message", "A Google message"], "why": "Real phones don't warn you through web pop-ups with phone numbers."}, {"q": "Before giving away or selling an old phone, what should you do?", "o": ["Back up, sign out of accounts and factory reset it", "Just delete photos", "Give it as is", "Remove the case"], "why": "Otherwise the next owner can see your stuff."}, {"q": "A flashlight app asks for your microphone and contacts. What do you do?", "o": ["Deny, or delete the app", "Allow everything", "Allow the microphone only", "Share contacts only"], "why": "Apps should only get what they need to work."}, {"q": "You turn on your phone's hotspot for friends. What's safe practice?", "o": ["Set a password and turn it off afterwards", "Leave it open", "Leave it on all day", "Name it with your full name"], "why": "An open hotspot lets anyone nearby join."}];
+const PASS=0.8, N=20;
+const $=s=>document.querySelector(s);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k));localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+let attempt=(store('osc-attempts-'+PART.slug)||0), current=[];
+function build(){
+  current=shuffle(BANK).slice(0,N).map(q=>{const opts=shuffle(q.o.map((t,i)=>({t,correct:i===0})));return {...q,opts}});
+  const box=$('#quiz');box.innerHTML='';
+  current.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='q';d.id='q'+i;
+    d.innerHTML='<h3>'+(i+1)+'. '+esc(q.q)+'</h3>'+q.opts.map((o,j)=>'<label><input type="radio" name="q'+i+'" value="'+j+'"> <span>'+esc(o.t)+'</span></label>').join('')+'<div class="why" hidden></div>';
+    box.appendChild(d);
+  });
+  $('#submit').hidden=false;$('#submit').disabled=false;$('#result').innerHTML='';
+}
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function submit(){
+  const name=$('#name').value.trim();
+  if(!name){alert('Please type your name at the top of the quiz first.');$('#name').focus();return}
+  const unanswered=current.findIndex((q,i)=>!document.querySelector('input[name=q'+i+']:checked'));
+  if(unanswered>=0){alert('Please answer every question. Question '+(unanswered+1)+' is still blank.');$('#q'+unanswered).scrollIntoView({behavior:'smooth',block:'center'});return}
+  let score=0;
+  current.forEach((q,i)=>{
+    const pick=+document.querySelector('input[name=q'+i+']:checked').value;
+    const ok=q.opts[pick].correct; if(ok)score++;
+    const d=$('#q'+i); d.classList.add(ok?'right':'wrong');
+    d.querySelectorAll('input').forEach(x=>x.disabled=true);
+    const w=d.querySelector('.why'); w.hidden=false;
+    const right=q.opts.find(o=>o.correct).t;
+    w.innerHTML=(ok?'<b>Correct.</b> ':'<b>Not quite.</b> The answer is: <b>'+esc(right)+'</b>. ')+esc(q.why);
+  });
+  attempt++; store('osc-attempts-'+PART.slug,attempt);
+  const pct=Math.round(score/N*100), passed=score/N>=PASS;
+  $('#submit').hidden=true;
+  const r=$('#result');
+  if(passed){
+    const when=new Date().toLocaleString('en-HK',{dateStyle:'medium',timeStyle:'short'});
+    store('osc-pass-'+PART.slug,{name,pct,when,attempt});
+    r.innerHTML='<div class="result pass"><div class="score">'+pct+'% \u2014 Passed</div><p>Well done. Read through the explanations below, then show this certificate to your parent.</p><div class="cert"><div class="kicker">Certificate of completion</div><h2 style="margin:.3em 0">'+esc(PART.title)+'</h2><p><b>'+esc(name)+'</b> scored <b>'+score+'/'+N+'</b> on attempt '+attempt+'<br>'+when+'</p></div></div>';
+  }else{
+    r.innerHTML='<div class="result fail"><div class="score">'+pct+'% \u2014 Not yet</div><p>You need at least 80% (16 out of 20) to pass. Read the explanations below and the guide above, then try again. You will get a new set of questions.</p><button onclick="retry()">Try again with new questions</button></div>';
+  }
+  r.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function retry(){build();$('#quiz').scrollIntoView({behavior:'smooth'})}
+function ready(){
+  const c=$('#watched');
+  const sync=()=>{$('#start').disabled=!c.checked};c.addEventListener('change',sync);sync();
+  $('#start').onclick=()=>{$('#quizArea').hidden=false;$('#start').parentElement.hidden=true;build();$('#quizArea').scrollIntoView({behavior:'smooth'})};
+  $('#submit').onclick=submit;
+  const prev=store('osc-pass-'+PART.slug); if(prev&&prev.name)$('#name').value=prev.name;
+}
+document.addEventListener('DOMContentLoaded',ready);
+</script></body></html>

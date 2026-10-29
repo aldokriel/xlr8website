@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part 2: Cameras, Bodies and Consent</title><style>
+:root{--bg:#f7f7f4;--card:#fff;--ink:#1d2433;--muted:#5b6475;--line:#e3e4df;--accent:#1f6feb;--accent-soft:#e8f0fe;--ok:#1a7f37;--ok-soft:#e6f4ea;--bad:#c62828;--bad-soft:#fdecea;--warn:#9a6700}
+@media (prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1a1f27;--ink:#e8eaee;--muted:#a3abba;--line:#2b323d;--accent:#6ea8ff;--accent-soft:#1e2a3d;--ok:#4ac26b;--ok-soft:#18301f;--bad:#ff7b72;--bad-soft:#3a1d1b;--warn:#e3b341}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 64px}
+a{color:var(--accent)}h1{font-size:1.8rem;line-height:1.2;margin:.2em 0 .3em}h2{font-size:1.25rem;margin:1.6em 0 .5em}
+.kicker{color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:12px 0}
+.rules li{margin:.45em 0}.rules{padding-left:1.2em}
+.videos{list-style:none;padding:0;margin:0}.videos li{padding:10px 0;border-bottom:1px solid var(--line)}.videos li:last-child{border:0}
+.videos .src{color:var(--muted);font-size:.88rem}
+.check{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:.95rem}
+.q{margin:18px 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.q h3{margin:0 0 10px;font-size:1.02rem}.q label{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:8px;cursor:pointer}
+.q label:hover{background:var(--accent-soft)}.q.right{border-color:var(--ok);background:var(--ok-soft)}.q.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.q .why{margin-top:8px;font-size:.93rem}.q .why b{font-weight:600}
+button{font:inherit;border:0;border-radius:10px;padding:12px 20px;background:var(--accent);color:#fff;cursor:pointer;font-weight:600}
+button.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button:disabled{opacity:.5;cursor:not-allowed}
+input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%;max-width:320px}
+.result{padding:18px 20px;border-radius:12px;margin:16px 0}.result.pass{background:var(--ok-soft);border:2px solid var(--ok)}.result.fail{background:var(--bad-soft);border:2px solid var(--bad)}
+.score{font-size:2rem;font-weight:700}
+.cert{border:3px double var(--ok);border-radius:12px;padding:20px;text-align:center;background:var(--card);margin-top:12px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:32px;flex-wrap:wrap}
+.parts{display:grid;gap:12px}.part{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit}
+.num{flex:0 0 40px;height:40px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:700}
+.status{margin-left:auto;font-size:.85rem;color:var(--muted);white-space:nowrap}.status.done{color:var(--ok);font-weight:600}
+.note{color:var(--muted);font-size:.92rem}
+@media print{button,.nav{display:none}}
+</style></head><body><div class="wrap">
+<div class="kicker"><a href="index.html">Online Safety Course</a> &middot; Part 2 of 10</div>
+<h1>Cameras, Bodies and Consent</h1>
+<p>A person&#x27;s body and image belong to them. In Hong Kong, recording people in private situations or sharing intimate images without consent are crimes, and images of anyone under 18 are treated very seriously everywhere.</p>
+<h2>The rules</h2><div class="card"><ol class="rules"><li>Never take photos or videos in bathrooms, toilets or changing rooms. Not of others, not of yourself.</li><li>Never screenshot or record a video call where someone is undressed, even partly, even as a joke.</li><li>Ask before taking, keeping or posting a photo of someone. Taking, keeping and sharing are three separate yeses.</li><li>Never send a photo of yourself without clothes, to anyone, for any reason.</li><li>If you receive a private image of someone: don&#x27;t forward it, delete it, tell a trusted adult.</li><li>On video calls: be fully dressed and in a shared room, not the bathroom.</li></ol></div>
+<h2>Watch and read</h2><div class="card"><ul class="videos"><li><a href="https://amaze.org/video/personal-safety-sexting/" target="_blank" rel="noopener">Sexting: What Should You Do?</a><div class="src">AMAZE</div></li><li><a href="https://amaze.org/video/healthy-relationships-consent-and-communication/" target="_blank" rel="noopener">Consent and Communication</a><div class="src">AMAZE</div></li><li><a href="https://www.childnet.com/resources/pshe-toolkit/crossing-the-line/sexting" target="_blank" rel="noopener">&quot;Just Send It&quot; (Crossing the Line)</a><div class="src">Childnet</div></li></ul>
+<label class="check"><input type="checkbox" id="watched"> I have read the rules and watched the videos (with a parent if possible).</label></div>
+<h2>Quiz</h2>
+<div class="card"><p class="note">20 random questions from a bank of 25. You need <b>80% (16/20)</b> to pass. If you don't pass, you redo it with a new set of questions.</p><button id="start">Start the quiz</button></div>
+<div id="quizArea" hidden>
+<div class="card"><label for="name"><b>Your name</b></label><br><input type="text" id="name" autocomplete="off"></div>
+<div id="quiz"></div><button id="submit">Check my answers</button><div id="result"></div></div>
+<div class="nav"><a href="part1-strangers.html">&larr; Part 1: Strangers, DMs and Invites</a><a href="part3-respect-race.html">Part 3: Respect Online: Race, Hate and Bullying &rarr;</a></div>
+</div><script>const PART={"slug": "part2-cameras-consent", "title": "Cameras, Bodies and Consent"};const BANK=[{"q": "In Hong Kong, is it OK to take photos in a toilet or changing room?", "o": ["No, never: it can be a crime", "Yes, if it's only friends", "Yes, if you don't post it", "Yes, if it's a joke"], "why": "Since 2021, voyeurism and recording people's intimate parts without consent are offences under HK's Crimes Ordinance."}, {"q": "On a group video call, a friend walks past half-dressed and someone says 'screenshot!' What do you do?", "o": ["Don't, and ask anyone who did to delete it", "Screenshot it but don't share it", "Screenshot it to show them later", "Laugh but don't screenshot"], "why": "Saving an image of someone undressed without their agreement isn't OK, even if you never share it."}, {"q": "If someone agrees to have a photo taken, does that mean you can share it?", "o": ["No, sharing needs its own yes", "Yes, always", "Yes, if it's a good photo", "Yes, with close friends only"], "why": "Consent to take is not consent to share. HK law specifically covers sharing images taken with consent."}, {"q": "An embarrassing photo of a classmate appears in your group chat. Best response?", "o": ["Don't forward or react; report it and tell an adult", "Forward it to one friend", "React with a laughing emoji", "Save it in case it's deleted"], "why": "Every forward or reaction spreads harm. Reporting and telling an adult helps stop it."}, {"q": "Someone asks you to send a photo without clothes. What do you do?", "o": ["Say no, block, and tell a parent", "Send one with your face hidden", "Send it if they promise to delete it", "Send it if they send one first"], "why": "Once sent, you lose control of it. Requests like this are often the start of blackmail."}, {"q": "Is it legal for under-18s to make or share nude images of themselves?", "o": ["No, it's illegal and can't be taken back", "Yes, if it's your own body", "Yes, if it's sent privately", "Yes, if it disappears"], "why": "Images of minors are treated as child abuse material in many places, even when a teen made them."}, {"q": "Someone sends you a nude photo of another student. What should you do?", "o": ["Don't share or save it; tell a trusted adult", "Forward it to warn others", "Save it as evidence", "Ignore it and keep it"], "why": "Keeping or forwarding it can itself be illegal. An adult can report it properly."}, {"q": "You took a funny photo of a friend asleep. They ask you to delete it. What do you do?", "o": ["Delete it", "Keep it but don't post it", "Post it once", "Delete it after showing a few people"], "why": "Their image belongs to them. When they say no, it goes."}, {"q": "What's the maximum penalty in Hong Kong for publishing intimate images without consent?", "o": ["Up to 5 years in jail", "A warning", "A HK$500 fine", "Nothing if you're under 18"], "why": "HK's 2021 law sets jail of up to 5 years for these image offences."}, {"q": "Are 'disappearing' photos (like on Snapchat) safe to send?", "o": ["No: they can be screenshotted or recorded", "Yes, they vanish", "Yes, the app warns you", "Yes, if you trust the person"], "why": "Another phone can photograph the screen. Nothing online truly disappears."}, {"q": "Taking a photo of a stranger on the MTR to make fun of them online is…", "o": ["Not OK: disrespectful and possibly harassment", "Fine, it's a public place", "Fine if you blur their face", "Fine if it's funny"], "why": "Being in public doesn't make someone a joke. It can hurt and get you in trouble."}, {"q": "Where should you be when you video call?", "o": ["Fully dressed in a shared room", "In the bathroom for privacy", "In bed with the door closed", "Anywhere, it doesn't matter"], "why": "Shared spaces and full clothes remove the chance of anything being recorded."}, {"q": "Someone uses AI to make a fake undressed image of a classmate. Is that OK because it's not real?", "o": ["No: it's just as harmful and covered by HK law", "Yes, it's fake", "Yes, if it's a joke", "Yes, if no one believes it"], "why": "HK's law covers altered and AI-made intimate images too. The harm to the person is real."}, {"q": "Before posting a group photo you should…", "o": ["Check everyone in it is OK with it", "Post it straight away", "Only check with your best friend", "Tag everyone so they know"], "why": "Everyone in the picture gets a say."}, {"q": "You accidentally receive a private image of someone. What's the right thing to do?", "o": ["Delete it, don't forward it, tell an adult", "Keep it secret", "Send it back to them", "Show a friend what happened"], "why": "Deleting stops it spreading. An adult can help if it's going around."}, {"q": "In the PE changing room, a classmate starts filming 'as a joke'. What do you do?", "o": ["Tell them to stop and tell a teacher", "Laugh along", "Film them back", "Ignore it"], "why": "Filming in changing rooms can be a crime in HK, joke or not."}, {"q": "Is a bathroom mirror selfie a good idea to post?", "o": ["No: don't take photos in bathrooms, and backgrounds show more than you think", "Yes, the lighting is good", "Yes, if you're dressed", "Yes, if it's for close friends"], "why": "Bathrooms are private spaces. Keep cameras out of them."}, {"q": "A boyfriend or girlfriend asks for a 'private' photo and says everyone does it. What do you do?", "o": ["Say no; someone who cares will respect it, and it's illegal under 18", "Send one to keep them happy", "Send one that hides your face", "Send one if they promise to delete it"], "why": "Pressure is not consent. And images of under-18s are illegal to make or share."}, {"q": "Who decides what happens to a photo of your body?", "o": ["You do; others need your permission", "Whoever took it", "Whoever has it on their phone", "The app it's on"], "why": "Your body and your image are yours."}, {"q": "Is it OK to secretly record a teacher or classmate and post it?", "o": ["No: it's disrespectful and can get you in serious trouble", "Yes, if they did something funny", "Yes, if you blur the face", "Yes, if it's only a story"], "why": "Secret recordings break trust and can break school rules and laws."}, {"q": "A friend sends you a 'funny' video of someone being hurt or humiliated. What do you do?", "o": ["Don't share it; report it and tell an adult", "Share it, it's going viral anyway", "Save it for later", "Add a funny caption"], "why": "Sharing humiliation makes you part of it."}, {"q": "Someone agreed to a photo, but now asks you to delete it. What do you do?", "o": ["Delete it: consent can be taken back", "Keep it, they already agreed", "Delete it after posting once", "Ask them why first"], "why": "A yes can change to a no at any time."}, {"q": "You notice a phone or hidden camera pointing into a toilet stall. What should you do?", "o": ["Leave and tell staff, a teacher or the police", "Take it home", "Post a photo of it online", "Ignore it"], "why": "This is a crime in HK. Adults can handle it and keep evidence."}, {"q": "You want to post a video from a sleepover. What should you check first?", "o": ["Everyone in it says yes and nobody is undressed or in a private moment", "That it's funny", "That it's under 30 seconds", "That you look good"], "why": "Everyone in the video gets a say."}, {"q": "Someone threatens to share an image they have of you. What do you do?", "o": ["Tell a parent right away; don't pay or send more", "Send them what they want", "Delete your accounts and hide it", "Try to scare them back"], "why": "Your parents can report it and use tools like Take It Down. You won't be blamed."}];
+const PASS=0.8, N=20;
+const $=s=>document.querySelector(s);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k));localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+let attempt=(store('osc-attempts-'+PART.slug)||0), current=[];
+function build(){
+  current=shuffle(BANK).slice(0,N).map(q=>{const opts=shuffle(q.o.map((t,i)=>({t,correct:i===0})));return {...q,opts}});
+  const box=$('#quiz');box.innerHTML='';
+  current.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='q';d.id='q'+i;
+    d.innerHTML='<h3>'+(i+1)+'. '+esc(q.q)+'</h3>'+q.opts.map((o,j)=>'<label><input type="radio" name="q'+i+'" value="'+j+'"> <span>'+esc(o.t)+'</span></label>').join('')+'<div class="why" hidden></div>';
+    box.appendChild(d);
+  });
+  $('#submit').hidden=false;$('#submit').disabled=false;$('#result').innerHTML='';
+}
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function submit(){
+  const name=$('#name').value.trim();
+  if(!name){alert('Please type your name at the top of the quiz first.');$('#name').focus();return}
+  const unanswered=current.findIndex((q,i)=>!document.querySelector('input[name=q'+i+']:checked'));
+  if(unanswered>=0){alert('Please answer every question. Question '+(unanswered+1)+' is still blank.');$('#q'+unanswered).scrollIntoView({behavior:'smooth',block:'center'});return}
+  let score=0;
+  current.forEach((q,i)=>{
+    const pick=+document.querySelector('input[name=q'+i+']:checked').value;
+    const ok=q.opts[pick].correct; if(ok)score++;
+    const d=$('#q'+i); d.classList.add(ok?'right':'wrong');
+    d.querySelectorAll('input').forEach(x=>x.disabled=true);
+    const w=d.querySelector('.why'); w.hidden=false;
+    const right=q.opts.find(o=>o.correct).t;
+    w.innerHTML=(ok?'<b>Correct.</b> ':'<b>Not quite.</b> The answer is: <b>'+esc(right)+'</b>. ')+esc(q.why);
+  });
+  attempt++; store('osc-attempts-'+PART.slug,attempt);
+  const pct=Math.round(score/N*100), passed=score/N>=PASS;
+  $('#submit').hidden=true;
+  const r=$('#result');
+  if(passed){
+    const when=new Date().toLocaleString('en-HK',{dateStyle:'medium',timeStyle:'short'});
+    store('osc-pass-'+PART.slug,{name,pct,when,attempt});
+    r.innerHTML='<div class="result pass"><div class="score">'+pct+'% \u2014 Passed</div><p>Well done. Read through the explanations below, then show this certificate to your parent.</p><div class="cert"><div class="kicker">Certificate of completion</div><h2 style="margin:.3em 0">'+esc(PART.title)+'</h2><p><b>'+esc(name)+'</b> scored <b>'+score+'/'+N+'</b> on attempt '+attempt+'<br>'+when+'</p></div></div>';
+  }else{
+    r.innerHTML='<div class="result fail"><div class="score">'+pct+'% \u2014 Not yet</div><p>You need at least 80% (16 out of 20) to pass. Read the explanations below and the guide above, then try again. You will get a new set of questions.</p><button onclick="retry()">Try again with new questions</button></div>';
+  }
+  r.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function retry(){build();$('#quiz').scrollIntoView({behavior:'smooth'})}
+function ready(){
+  const c=$('#watched');
+  const sync=()=>{$('#start').disabled=!c.checked};c.addEventListener('change',sync);sync();
+  $('#start').onclick=()=>{$('#quizArea').hidden=false;$('#start').parentElement.hidden=true;build();$('#quizArea').scrollIntoView({behavior:'smooth'})};
+  $('#submit').onclick=submit;
+  const prev=store('osc-pass-'+PART.slug); if(prev&&prev.name)$('#name').value=prev.name;
+}
+document.addEventListener('DOMContentLoaded',ready);
+</script></body></html>

@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Online Safety Course</title><style>
+:root{--bg:#f7f7f4;--card:#fff;--ink:#1d2433;--muted:#5b6475;--line:#e3e4df;--accent:#1f6feb;--accent-soft:#e8f0fe;--ok:#1a7f37;--ok-soft:#e6f4ea;--bad:#c62828;--bad-soft:#fdecea;--warn:#9a6700}
+@media (prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1a1f27;--ink:#e8eaee;--muted:#a3abba;--line:#2b323d;--accent:#6ea8ff;--accent-soft:#1e2a3d;--ok:#4ac26b;--ok-soft:#18301f;--bad:#ff7b72;--bad-soft:#3a1d1b;--warn:#e3b341}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 64px}
+a{color:var(--accent)}h1{font-size:1.8rem;line-height:1.2;margin:.2em 0 .3em}h2{font-size:1.25rem;margin:1.6em 0 .5em}
+.kicker{color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:12px 0}
+.rules li{margin:.45em 0}.rules{padding-left:1.2em}
+.videos{list-style:none;padding:0;margin:0}.videos li{padding:10px 0;border-bottom:1px solid var(--line)}.videos li:last-child{border:0}
+.videos .src{color:var(--muted);font-size:.88rem}
+.check{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:.95rem}
+.q{margin:18px 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.q h3{margin:0 0 10px;font-size:1.02rem}.q label{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:8px;cursor:pointer}
+.q label:hover{background:var(--accent-soft)}.q.right{border-color:var(--ok);background:var(--ok-soft)}.q.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.q .why{margin-top:8px;font-size:.93rem}.q .why b{font-weight:600}
+button{font:inherit;border:0;border-radius:10px;padding:12px 20px;background:var(--accent);color:#fff;cursor:pointer;font-weight:600}
+button.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button:disabled{opacity:.5;cursor:not-allowed}
+input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%;max-width:320px}
+.result{padding:18px 20px;border-radius:12px;margin:16px 0}.result.pass{background:var(--ok-soft);border:2px solid var(--ok)}.result.fail{background:var(--bad-soft);border:2px solid var(--bad)}
+.score{font-size:2rem;font-weight:700}
+.cert{border:3px double var(--ok);border-radius:12px;padding:20px;text-align:center;background:var(--card);margin-top:12px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:32px;flex-wrap:wrap}
+.parts{display:grid;gap:12px}.part{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit}
+.num{flex:0 0 40px;height:40px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:700}
+.status{margin-left:auto;font-size:.85rem;color:var(--muted);white-space:nowrap}.status.done{color:var(--ok);font-weight:600}
+.note{color:var(--muted);font-size:.92rem}
+@media print{button,.nav{display:none}}
+</style></head><body><div class="wrap">
+<div class="kicker">For teens 13 to 15 &middot; Hong Kong</div>
+<h1>Online Safety Course</h1>
+<p>The internet connects you to the whole world, and that includes people who don't have your best interests at heart. This course covers the basics in ten parts. Each part has rules, short videos and a quiz. You need 80% to pass each quiz; if you don't, you redo it with new questions.</p>
+<a class="card part" href="real-hk-cases.html"><div class="num">!</div><div><b>Read first: Real Hong Kong Cases</b><div class="note">11 real stories of teens in trouble &middot; no quiz</div></div><div class="status">Read</div></a><div class="parts"><a class="card part" href="part1-strangers.html"><div class="num">1</div><div><b>Strangers, DMs and Invites</b><div class="note">6 rules &middot; 4 links &middot; quiz</div></div><div class="status" data-slug="part1-strangers">Not started</div></a><a class="card part" href="part2-cameras-consent.html"><div class="num">2</div><div><b>Cameras, Bodies and Consent</b><div class="note">6 rules &middot; 3 links &middot; quiz</div></div><div class="status" data-slug="part2-cameras-consent">Not started</div></a><a class="card part" href="part3-respect-race.html"><div class="num">3</div><div><b>Respect Online: Race, Hate and Bullying</b><div class="note">5 rules &middot; 4 links &middot; quiz</div></div><div class="status" data-slug="part3-respect-race">Not started</div></a><a class="card part" href="part4-personal-info.html"><div class="num">4</div><div><b>Personal Information and Doxxing</b><div class="note">6 rules &middot; 4 links &middot; quiz</div></div><div class="status" data-slug="part4-personal-info">Not started</div></a><a class="card part" href="part5-scams-blackmail.html"><div class="num">5</div><div><b>Blackmail, Scams and Fake Accounts</b><div class="note">5 rules &middot; 5 links &middot; quiz</div></div><div class="status" data-slug="part5-scams-blackmail">Not started</div></a><a class="card part" href="part6-help-footprint.html"><div class="num">6</div><div><b>Getting Help and Your Digital Footprint</b><div class="note">6 rules &middot; 4 links &middot; quiz</div></div><div class="status" data-slug="part6-help-footprint">Not started</div></a><a class="card part" href="part7-dark-corners.html"><div class="num">7</div><div><b>Dark Corners: Extreme Groups, &#x27;Challenges&#x27; and the Dark Web</b><div class="note">6 rules &middot; 4 links &middot; quiz</div></div><div class="status" data-slug="part7-dark-corners">Not started</div></a><a class="card part" href="part8-phone-wifi.html"><div class="num">8</div><div><b>Your Phone, Wi-Fi and Devices</b><div class="note">6 rules &middot; 4 links &middot; quiz</div></div><div class="status" data-slug="part8-phone-wifi">Not started</div></a><a class="card part" href="part9-deepfakes.html"><div class="num">9</div><div><b>Deepfakes and AI Fakes</b><div class="note">6 rules &middot; 5 links &middot; quiz</div></div><div class="status" data-slug="part9-deepfakes">Not started</div></a><a class="card part" href="part10-passwords-locks.html"><div class="num">10</div><div><b>Passwords, Passkeys and Phone Locks</b><div class="note">6 rules &middot; 5 links &middot; quiz</div></div><div class="status" data-slug="part10-passwords-locks">Not started</div></a></div>
+<h2>For parents</h2>
+<div class="card"><ul class="rules">
+<li>Do one part per sitting, ideally watching the videos together.</li>
+<li>After each quiz, ask your teen to show you the certificate and talk through any questions they got wrong.</li>
+<li>Progress is saved in this browser on this device only. Each child should use their own device, or clear progress between them.</li>
+<li>Preview the Part 5 and Part 7 links first. Part 7's two news articles about the Malmesbury case are for parents; tell your teens about it in your own words.</li>
+<li>The legal points are simplified for teaching, not legal advice.</li>
+</ul>
+<button class="secondary" onclick="if(confirm('Clear all quiz progress on this device?')){try{Object.keys(localStorage).filter(k=>k.startsWith('osc-')).forEach(k=>localStorage.removeItem(k))}catch(e){};location.reload()}">Clear progress on this device</button></div>
+</div><script>
+document.querySelectorAll('.status').forEach(el=>{try{const v=JSON.parse(localStorage.getItem('osc-pass-'+el.dataset.slug));if(v){el.textContent='Passed '+v.pct+'% ('+v.name+')';el.classList.add('done')}}catch(e){}});
+</script></body></html>

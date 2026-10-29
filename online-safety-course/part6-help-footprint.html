@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part 6: Getting Help and Your Digital Footprint</title><style>
+:root{--bg:#f7f7f4;--card:#fff;--ink:#1d2433;--muted:#5b6475;--line:#e3e4df;--accent:#1f6feb;--accent-soft:#e8f0fe;--ok:#1a7f37;--ok-soft:#e6f4ea;--bad:#c62828;--bad-soft:#fdecea;--warn:#9a6700}
+@media (prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1a1f27;--ink:#e8eaee;--muted:#a3abba;--line:#2b323d;--accent:#6ea8ff;--accent-soft:#1e2a3d;--ok:#4ac26b;--ok-soft:#18301f;--bad:#ff7b72;--bad-soft:#3a1d1b;--warn:#e3b341}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 64px}
+a{color:var(--accent)}h1{font-size:1.8rem;line-height:1.2;margin:.2em 0 .3em}h2{font-size:1.25rem;margin:1.6em 0 .5em}
+.kicker{color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:12px 0}
+.rules li{margin:.45em 0}.rules{padding-left:1.2em}
+.videos{list-style:none;padding:0;margin:0}.videos li{padding:10px 0;border-bottom:1px solid var(--line)}.videos li:last-child{border:0}
+.videos .src{color:var(--muted);font-size:.88rem}
+.check{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:.95rem}
+.q{margin:18px 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.q h3{margin:0 0 10px;font-size:1.02rem}.q label{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:8px;cursor:pointer}
+.q label:hover{background:var(--accent-soft)}.q.right{border-color:var(--ok);background:var(--ok-soft)}.q.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.q .why{margin-top:8px;font-size:.93rem}.q .why b{font-weight:600}
+button{font:inherit;border:0;border-radius:10px;padding:12px 20px;background:var(--accent);color:#fff;cursor:pointer;font-weight:600}
+button.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button:disabled{opacity:.5;cursor:not-allowed}
+input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%;max-width:320px}
+.result{padding:18px 20px;border-radius:12px;margin:16px 0}.result.pass{background:var(--ok-soft);border:2px solid var(--ok)}.result.fail{background:var(--bad-soft);border:2px solid var(--bad)}
+.score{font-size:2rem;font-weight:700}
+.cert{border:3px double var(--ok);border-radius:12px;padding:20px;text-align:center;background:var(--card);margin-top:12px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:32px;flex-wrap:wrap}
+.parts{display:grid;gap:12px}.part{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit}
+.num{flex:0 0 40px;height:40px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:700}
+.status{margin-left:auto;font-size:.85rem;color:var(--muted);white-space:nowrap}.status.done{color:var(--ok);font-weight:600}
+.note{color:var(--muted);font-size:.92rem}
+@media print{button,.nav{display:none}}
+</style></head><body><div class="wrap">
+<div class="kicker"><a href="index.html">Online Safety Course</a> &middot; Part 6 of 10</div>
+<h1>Getting Help and Your Digital Footprint</h1>
+<p>Everyone makes mistakes online. What matters most is telling someone quickly, and remembering that what you post can follow you for years.</p>
+<h2>The rules</h2><div class="card"><ol class="rules"><li>Family rule: you will never be in trouble for telling us something went wrong online. Hiding it is what makes things worse.</li><li>Something makes you uncomfortable? Stop, leave, tell a parent.</li><li>Before posting, ask: would I be OK if my parents, teachers or a future university saw this?</li><li>Deleted isn&#x27;t gone. Screenshots and copies remain.</li><li>Emergency or threats to your safety: call 999.</li><li>Report and block instead of arguing.</li></ol></div>
+<h2>Watch and read</h2><div class="card"><ul class="videos"><li><a href="https://takeitdown.ncmec.org" target="_blank" rel="noopener">Take It Down: removing images</a><div class="src">NCMEC</div></li><li><a href="https://www.ncmec.org/backtoschool" target="_blank" rel="noopener">Healthy Relationships</a><div class="src">NCMEC</div></li><li><a href="https://amaze.org/video/wise-on-the-web/" target="_blank" rel="noopener">Wise on the Web</a><div class="src">AMAZE</div></li><li><a href="https://www.pcpd.org.hk/childrenprivacy/en/for_parents.html" target="_blank" rel="noopener">Children Privacy hub for families</a><div class="src">PCPD</div></li></ul>
+<label class="check"><input type="checkbox" id="watched"> I have read the rules and watched the videos (with a parent if possible).</label></div>
+<h2>Quiz</h2>
+<div class="card"><p class="note">20 random questions from a bank of 25. You need <b>80% (16/20)</b> to pass. If you don't pass, you redo it with a new set of questions.</p><button id="start">Start the quiz</button></div>
+<div id="quizArea" hidden>
+<div class="card"><label for="name"><b>Your name</b></label><br><input type="text" id="name" autocomplete="off"></div>
+<div id="quiz"></div><button id="submit">Check my answers</button><div id="result"></div></div>
+<div class="nav"><a href="part5-scams-blackmail.html">&larr; Part 5: Blackmail, Scams and Fake Accounts</a><a href="part7-dark-corners.html">Part 7: Dark Corners: Extreme Groups, &#x27;Challenges&#x27; and the Dark Web &rarr;</a></div>
+</div><script>const PART={"slug": "part6-help-footprint", "title": "Getting Help and Your Digital Footprint"};const BANK=[{"q": "Something goes wrong online. Who should you tell?", "o": ["A parent or trusted adult, like the school counsellor", "Nobody", "Only friends your age", "The person causing the problem"], "why": "Adults can report, contact police and protect you."}, {"q": "In our family, what happens if you tell us something went wrong online?", "o": ["We help first; you won't be in trouble for telling", "You lose your phone forever", "We get angry", "We tell everyone"], "why": "Telling early is always the right move."}, {"q": "What is your 'digital footprint'?", "o": ["The trail of everything you post, like and share", "Your phone's step counter", "Your screen time", "Your fingerprint login"], "why": "It builds up over years and others can search it."}, {"q": "A good test before posting something is…", "o": ["Would I be OK if parents, teachers or a university saw it?", "Will it get lots of likes?", "Is it funny right now?", "Will it annoy someone?"], "why": "If you'd be embarrassed later, don't post it now."}, {"q": "If you delete a post, is it gone forever?", "o": ["Not necessarily: screenshots and copies may remain", "Yes, completely", "Yes, after 24 hours", "Yes, if nobody liked it"], "why": "Once posted, you lose control over copies."}, {"q": "Someone threatens to hurt you in real life. What number do you call in Hong Kong?", "o": ["999", "18222", "911", "112"], "why": "999 is HK's emergency number. 18222 is for checking scams."}, {"q": "What does the report button do?", "o": ["Flags the content to the platform, usually anonymously", "Tells the person you reported them", "Deletes your account", "Nothing"], "why": "Most reports are anonymous and help moderators act."}, {"q": "You feel worse after scrolling for a long time. What's a good move?", "o": ["Take a break and talk to someone", "Keep scrolling", "Post about it to strangers", "Delete your friends"], "why": "Breaks and real conversations help more than more scrolling."}, {"q": "Someone you know is sharing a classmate's personal information. What do you do?", "o": ["Don't join; report it and tell an adult", "Share it too", "Keep quiet", "Warn the classmate by reposting it"], "why": "Sharing it, even to warn, spreads it further."}, {"q": "Something online makes you uncomfortable. First step?", "o": ["Stop, leave the chat or page, and tell a parent", "Keep watching to understand it", "Send it to friends", "Reply to ask what it is"], "why": "Leaving fast and telling someone is always OK."}, {"q": "Why keep your phone outside the bedroom at night?", "o": ["Late-night chats are when most risky decisions and contact happen", "It charges faster", "It's bad for the phone", "There's no reason"], "why": "Tired people make poorer choices, and strangers often message late."}, {"q": "Someone is rude to you in comments. Best action?", "o": ["Block and report rather than argue", "Write a long reply", "Ask friends to attack them", "Post their personal details"], "why": "Arguing feeds them. Blocking ends it."}, {"q": "Do universities and employers ever look at social media?", "o": ["Yes, some do", "Never", "Only for famous people", "Only if you're over 21"], "why": "Some check public profiles when deciding who to accept."}, {"q": "When is it OK to screenshot someone's mean or threatening messages?", "o": ["To show a parent or police as evidence, not to spread them", "To post on your story", "To share in group chats", "Never"], "why": "Evidence goes to adults. Never screenshot or keep images of anyone undressed, even as evidence: tell an adult instead."}, {"q": "A person you only know online asks you to keep a secret from your parents. What do you do?", "o": ["Tell your parents", "Keep the secret", "Ask your friends", "Block your parents"], "why": "Safe people don't ask you to keep secrets from family."}, {"q": "Besides parents, who are trusted adults you could tell?", "o": ["A teacher, school counsellor, coach or relative", "Someone you met online", "A stranger at the mall", "Nobody"], "why": "Pick adults who know you in real life."}, {"q": "You saw something disturbing online and can't stop thinking about it. What helps?", "o": ["Talking to a parent or counsellor", "Keeping it to yourself", "Watching more to get used to it", "Sending it to friends"], "why": "Talking about it makes it easier to process."}, {"q": "What's the safe assumption about anything you send privately?", "o": ["It could be screenshotted and shown to others", "It stays private forever", "Only the receiver will see it", "It's deleted when you close the app"], "why": "Send only what you'd be OK with others seeing."}, {"q": "You find embarrassing posts from when you were 11. What can you do?", "o": ["Review them and delete or archive them", "Leave them, nobody looks", "Make them more public", "Repost them"], "why": "Cleaning up old posts shrinks your footprint."}, {"q": "Why is it useful to search your own name online sometimes?", "o": ["To check what's public about you", "To get more followers", "It isn't useful", "To find new friends"], "why": "Knowing what's out there lets you fix it."}, {"q": "A friend posts something risky about themselves. What could you do?", "o": ["Talk to them privately, and tell an adult if they could be in danger", "Comment publicly", "Ignore it", "Screenshot and share it"], "why": "Private concern beats public calling-out."}, {"q": "A friend tells you online they want to hurt themselves. What do you do?", "o": ["Tell a trusted adult right away, even if they asked you not to", "Keep it secret", "Tell them to stop being dramatic", "Wait and see"], "why": "Their safety matters more than a secret. In an emergency, call 999."}, {"q": "Is setting screen-time limits a good idea?", "o": ["Yes, it helps you stay in control", "No, it's only for little kids", "No, it's pointless", "Only on weekends"], "why": "Limits leave room for sleep, school and real friends."}, {"q": "Once a post is shared by others, who controls it?", "o": ["Nobody can fully control it any more", "Only you", "Only the app", "Only the person who shared it"], "why": "That's why thinking before posting matters."}, {"q": "A good test before commenting is…", "o": ["Would I say this to their face?", "Will it get likes?", "Is it clever?", "Will they reply?"], "why": "If you wouldn't say it in person, don't type it."}];
+const PASS=0.8, N=20;
+const $=s=>document.querySelector(s);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k));localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+let attempt=(store('osc-attempts-'+PART.slug)||0), current=[];
+function build(){
+  current=shuffle(BANK).slice(0,N).map(q=>{const opts=shuffle(q.o.map((t,i)=>({t,correct:i===0})));return {...q,opts}});
+  const box=$('#quiz');box.innerHTML='';
+  current.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='q';d.id='q'+i;
+    d.innerHTML='<h3>'+(i+1)+'. '+esc(q.q)+'</h3>'+q.opts.map((o,j)=>'<label><input type="radio" name="q'+i+'" value="'+j+'"> <span>'+esc(o.t)+'</span></label>').join('')+'<div class="why" hidden></div>';
+    box.appendChild(d);
+  });
+  $('#submit').hidden=false;$('#submit').disabled=false;$('#result').innerHTML='';
+}
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function submit(){
+  const name=$('#name').value.trim();
+  if(!name){alert('Please type your name at the top of the quiz first.');$('#name').focus();return}
+  const unanswered=current.findIndex((q,i)=>!document.querySelector('input[name=q'+i+']:checked'));
+  if(unanswered>=0){alert('Please answer every question. Question '+(unanswered+1)+' is still blank.');$('#q'+unanswered).scrollIntoView({behavior:'smooth',block:'center'});return}
+  let score=0;
+  current.forEach((q,i)=>{
+    const pick=+document.querySelector('input[name=q'+i+']:checked').value;
+    const ok=q.opts[pick].correct; if(ok)score++;
+    const d=$('#q'+i); d.classList.add(ok?'right':'wrong');
+    d.querySelectorAll('input').forEach(x=>x.disabled=true);
+    const w=d.querySelector('.why'); w.hidden=false;
+    const right=q.opts.find(o=>o.correct).t;
+    w.innerHTML=(ok?'<b>Correct.</b> ':'<b>Not quite.</b> The answer is: <b>'+esc(right)+'</b>. ')+esc(q.why);
+  });
+  attempt++; store('osc-attempts-'+PART.slug,attempt);
+  const pct=Math.round(score/N*100), passed=score/N>=PASS;
+  $('#submit').hidden=true;
+  const r=$('#result');
+  if(passed){
+    const when=new Date().toLocaleString('en-HK',{dateStyle:'medium',timeStyle:'short'});
+    store('osc-pass-'+PART.slug,{name,pct,when,attempt});
+    r.innerHTML='<div class="result pass"><div class="score">'+pct+'% \u2014 Passed</div><p>Well done. Read through the explanations below, then show this certificate to your parent.</p><div class="cert"><div class="kicker">Certificate of completion</div><h2 style="margin:.3em 0">'+esc(PART.title)+'</h2><p><b>'+esc(name)+'</b> scored <b>'+score+'/'+N+'</b> on attempt '+attempt+'<br>'+when+'</p></div></div>';
+  }else{
+    r.innerHTML='<div class="result fail"><div class="score">'+pct+'% \u2014 Not yet</div><p>You need at least 80% (16 out of 20) to pass. Read the explanations below and the guide above, then try again. You will get a new set of questions.</p><button onclick="retry()">Try again with new questions</button></div>';
+  }
+  r.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function retry(){build();$('#quiz').scrollIntoView({behavior:'smooth'})}
+function ready(){
+  const c=$('#watched');
+  const sync=()=>{$('#start').disabled=!c.checked};c.addEventListener('change',sync);sync();
+  $('#start').onclick=()=>{$('#quizArea').hidden=false;$('#start').parentElement.hidden=true;build();$('#quizArea').scrollIntoView({behavior:'smooth'})};
+  $('#submit').onclick=submit;
+  const prev=store('osc-pass-'+PART.slug); if(prev&&prev.name)$('#name').value=prev.name;
+}
+document.addEventListener('DOMContentLoaded',ready);
+</script></body></html>

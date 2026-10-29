@@ -1,0 +1,98 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Part 1: Strangers, DMs and Invites</title><style>
+:root{--bg:#f7f7f4;--card:#fff;--ink:#1d2433;--muted:#5b6475;--line:#e3e4df;--accent:#1f6feb;--accent-soft:#e8f0fe;--ok:#1a7f37;--ok-soft:#e6f4ea;--bad:#c62828;--bad-soft:#fdecea;--warn:#9a6700}
+@media (prefers-color-scheme:dark){:root{--bg:#12151b;--card:#1a1f27;--ink:#e8eaee;--muted:#a3abba;--line:#2b323d;--accent:#6ea8ff;--accent-soft:#1e2a3d;--ok:#4ac26b;--ok-soft:#18301f;--bad:#ff7b72;--bad-soft:#3a1d1b;--warn:#e3b341}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 64px}
+a{color:var(--accent)}h1{font-size:1.8rem;line-height:1.2;margin:.2em 0 .3em}h2{font-size:1.25rem;margin:1.6em 0 .5em}
+.kicker{color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:12px 0}
+.rules li{margin:.45em 0}.rules{padding-left:1.2em}
+.videos{list-style:none;padding:0;margin:0}.videos li{padding:10px 0;border-bottom:1px solid var(--line)}.videos li:last-child{border:0}
+.videos .src{color:var(--muted);font-size:.88rem}
+.check{display:flex;gap:8px;align-items:flex-start;margin-top:12px;font-size:.95rem}
+.q{margin:18px 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.q h3{margin:0 0 10px;font-size:1.02rem}.q label{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:8px;cursor:pointer}
+.q label:hover{background:var(--accent-soft)}.q.right{border-color:var(--ok);background:var(--ok-soft)}.q.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.q .why{margin-top:8px;font-size:.93rem}.q .why b{font-weight:600}
+button{font:inherit;border:0;border-radius:10px;padding:12px 20px;background:var(--accent);color:#fff;cursor:pointer;font-weight:600}
+button.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button:disabled{opacity:.5;cursor:not-allowed}
+input[type=text]{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);width:100%;max-width:320px}
+.result{padding:18px 20px;border-radius:12px;margin:16px 0}.result.pass{background:var(--ok-soft);border:2px solid var(--ok)}.result.fail{background:var(--bad-soft);border:2px solid var(--bad)}
+.score{font-size:2rem;font-weight:700}
+.cert{border:3px double var(--ok);border-radius:12px;padding:20px;text-align:center;background:var(--card);margin-top:12px}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:32px;flex-wrap:wrap}
+.parts{display:grid;gap:12px}.part{display:flex;gap:14px;align-items:center;text-decoration:none;color:inherit}
+.num{flex:0 0 40px;height:40px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:700}
+.status{margin-left:auto;font-size:.85rem;color:var(--muted);white-space:nowrap}.status.done{color:var(--ok);font-weight:600}
+.note{color:var(--muted);font-size:.92rem}
+@media print{button,.nav{display:none}}
+</style></head><body><div class="wrap">
+<div class="kicker"><a href="index.html">Online Safety Course</a> &middot; Part 1 of 10</div>
+<h1>Strangers, DMs and Invites</h1>
+<p>Most people online are not who you&#x27;d expect. Photos, names, ages and blue ticks can all be faked. The safest online circle is people you know in real life.</p>
+<h2>The rules</h2><div class="card"><ol class="rules"><li>Only chat with people you know in real life, or that your parents have met.</li><li>Don&#x27;t message random people, and don&#x27;t DM celebrities. Accounts that reply are often impersonators.</li><li>Decline follow requests, friend requests, group-chat and server invites from strangers.</li><li>Never move a chat to another app (WhatsApp, Telegram, Snapchat) because someone online asked.</li><li>Never meet someone from online in person without a parent.</li><li>If anyone asks you to keep your chats secret, that&#x27;s the moment to tell a parent.</li></ol></div>
+<h2>Watch and read</h2><div class="card"><ul class="videos"><li><a href="https://amaze.org/video/being-safe-on-the-internet/" target="_blank" rel="noopener">Being Safe on the Internet</a><div class="src">AMAZE</div></li><li><a href="https://www.missingkids.org/NetSmartz/Sextortion" target="_blank" rel="noopener">It&#x27;s Called Sextortion (how fake &#x27;friends&#x27; operate)</a><div class="src">NCMEC NetSmartz</div></li><li><a href="https://cyberdefender.hk/protect-your-privacy-online/" target="_blank" rel="noopener">Protect your privacy online (HK Police)</a><div class="src">CyberDefender.hk</div></li><li><a href="https://www.ncmec.org/backtoschool" target="_blank" rel="noopener">Healthy Relationships (spotting manipulation)</a><div class="src">NCMEC</div></li></ul>
+<label class="check"><input type="checkbox" id="watched"> I have read the rules and watched the videos (with a parent if possible).</label></div>
+<h2>Quiz</h2>
+<div class="card"><p class="note">20 random questions from a bank of 25. You need <b>80% (16/20)</b> to pass. If you don't pass, you redo it with a new set of questions.</p><button id="start">Start the quiz</button></div>
+<div id="quizArea" hidden>
+<div class="card"><label for="name"><b>Your name</b></label><br><input type="text" id="name" autocomplete="off"></div>
+<div id="quiz"></div><button id="submit">Check my answers</button><div id="result"></div></div>
+<div class="nav"><a href="index.html">&larr; All parts</a><a href="part2-cameras-consent.html">Part 2: Cameras, Bodies and Consent &rarr;</a></div>
+</div><script>const PART={"slug": "part1-strangers", "title": "Strangers, DMs and Invites"};const BANK=[{"q": "Someone you don't know, with no mutual friends, sends you a follow request. What should you do?", "o": ["Decline or ignore it", "Accept it to be polite", "Accept it, then check them later", "Message them to ask who they are"], "why": "If you don't know them in real life, there's no reason to let them see your posts or message you."}, {"q": "Who should you chat with in your DMs?", "o": ["People you know in real life", "Anyone who seems friendly", "Anyone your age", "Anyone with lots of followers"], "why": "Friendliness, age and follower counts can all be faked. Real-life friends are the safe circle."}, {"q": "An account with a famous person's name replies to you and asks you to continue on WhatsApp or Telegram. What's most likely?", "o": ["It's an impersonator or scammer", "The celebrity really likes you", "It's their official fan service", "It's a giveaway you've won"], "why": "Real celebrities don't move fans to private apps. Moving apps is a common step in scams."}, {"q": "Why do people with bad intentions ask you to move to another app?", "o": ["Fewer safety checks and harder to report them", "The other app has better stickers", "It's faster", "To protect your privacy"], "why": "Private apps make it easier to hide from moderators and from your parents."}, {"q": "An online friend says they're 14. How sure can you be?", "o": ["You can't be sure: age, photos and voice can be faked", "Very sure if they sent a selfie", "Sure if they play the same games", "Sure if they've been nice for a month"], "why": "Selfies can be stolen and voices disguised. You only really know people you've met."}, {"q": "A stranger invites you to a group chat or Discord server. What do you do?", "o": ["Don't join; ask a parent if you're unsure", "Join, but stay quiet", "Join if there are lots of members", "Join and invite your friends too"], "why": "Group invites from strangers can lead to scams, adult content or people targeting teens."}, {"q": "Someone you met online wants to meet in person. What should you do?", "o": ["Tell a parent; never go without one", "Meet in a busy mall", "Bring a friend your age", "Go if you've talked for a long time"], "why": "A busy place or a same-age friend doesn't make it safe. A parent must be involved."}, {"q": "Someone online gives you lots of compliments very fast and says only they really understand you. This is…", "o": ["A warning sign of manipulation", "Proof they're a good friend", "Normal online behaviour", "A sign they're your age"], "why": "Fast flattery and 'only I understand you' are classic ways to build trust and pull you away from family."}, {"q": "An online contact says, 'Don't tell your parents about our chats.' What does that mean?", "o": ["It's a red flag: tell a parent", "They value privacy", "They're shy", "Parents wouldn't understand anyway"], "why": "Safe people don't ask you to hide them from your family."}, {"q": "What's a risk of DMing celebrities 'I love you'?", "o": ["Fake accounts reply and use your feelings to manipulate you", "The celebrity will be annoyed", "You'll get too many replies", "There is no risk"], "why": "Scammers watch for eager fans and use those feelings to get money, photos or information."}, {"q": "A player in a game offers free skins or Robux if you give them your login. What is it?", "o": ["A scam to steal your account", "A nice gift", "A normal trade", "A game promotion"], "why": "Nobody needs your password to give you something. They want your account."}, {"q": "Which Instagram setup is safest?", "o": ["Private account; messages only from people you follow", "Public account; messages from everyone", "Private account; messages from everyone", "Public account with no profile photo"], "why": "Private plus restricted messaging keeps strangers out of your feed and inbox."}, {"q": "An account you don't know follows you. It's new, has three posts, all of a model. Most likely?", "o": ["A fake account", "A real person who likes you", "A modelling agency", "A school friend's new account"], "why": "New, few posts and model photos are typical signs of fake profiles."}, {"q": "You get a video call from a number or account you don't know. What do you do?", "o": ["Don't answer", "Answer with the camera off", "Answer to see who it is", "Answer and hang up quickly"], "why": "Scammers use video calls to record you. Unknown callers can message first if it's real."}, {"q": "A 'friend of a friend' you've never met wants to DM you. What's a smart move?", "o": ["Check with your friend in person first", "Accept: friends of friends are safe", "Accept and ask for a selfie", "Accept but don't reply"], "why": "Fake accounts often pretend to know your friends. Confirm in real life."}, {"q": "Someone you only know online sends you a gift card or money for no reason. What should you do?", "o": ["Tell a parent: gifts are used to make you feel you owe them", "Say thanks and keep it", "Send a gift back", "Keep it secret so you don't lose it"], "why": "Unexpected gifts are a known grooming tactic. The FBI lists them as a warning sign."}, {"q": "A stranger comments on your post: 'which school u go to?' What do you do?", "o": ["Don't answer; delete the comment or limit comments", "Answer, it's harmless", "Answer with just the area", "DM them the answer instead"], "why": "Your school tells people where to find you every weekday."}, {"q": "A message request says, 'I saw you on your friend's story, you're cute.' You don't know them. Best move?", "o": ["Ignore or delete it, and check with your friend in real life", "Reply to be polite", "Follow them back", "Send a selfie"], "why": "Using a friend's name is a common way to look trustworthy."}, {"q": "An online friend asks for your phone number or Snapchat 'to talk more'. What do you do?", "o": ["Don't give it; keep strangers off your private apps", "Give it if they seem nice", "Give a friend's number instead", "Give it but block later"], "why": "Moving to private apps makes it harder for anyone to see what's happening."}, {"q": "Someone you met in a game asks to video chat. What should you do?", "o": ["Say no", "Say yes with the camera on", "Say yes but only for a minute", "Say yes if they turn their camera on first"], "why": "Video calls with strangers can be recorded and used against you."}, {"q": "What does 'grooming' mean online?", "o": ["Building trust with a young person in order to manipulate or exploit them", "Taking care of your appearance", "Cleaning up your follower list", "Editing photos"], "why": "Groomers act kind, generous and understanding before asking for something."}, {"q": "Someone says they're a model scout or talent agent and wants photos of you. What's most likely?", "o": ["A scam or something worse: tell a parent", "A real career chance", "A school project", "A compliment to accept"], "why": "Real agencies work through parents, not DMs to teenagers."}, {"q": "You accepted a stranger's follow request by mistake. What now?", "o": ["Remove and block them", "Leave it, it doesn't matter", "Message them to explain", "Make your account public"], "why": "Removing them stops them seeing your posts and stories."}, {"q": "'Suggested friends' or 'Quick Add' shows someone you don't know. Should you add them?", "o": ["No, only add people you know in real life", "Yes, the app recommended them", "Yes, if you have one mutual friend", "Yes, if they're your age"], "why": "Suggestions come from algorithms, not from people vouching for them."}, {"q": "An older teen or adult you met online offers to help with homework privately and wants your number. What do you do?", "o": ["Tell a parent", "Accept, it's helpful", "Give them your school email instead", "Accept if they seem smart"], "why": "Offers of special help are a common way to get private contact."}];
+const PASS=0.8, N=20;
+const $=s=>document.querySelector(s);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function store(k,v){try{if(v===undefined)return JSON.parse(localStorage.getItem(k));localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+let attempt=(store('osc-attempts-'+PART.slug)||0), current=[];
+function build(){
+  current=shuffle(BANK).slice(0,N).map(q=>{const opts=shuffle(q.o.map((t,i)=>({t,correct:i===0})));return {...q,opts}});
+  const box=$('#quiz');box.innerHTML='';
+  current.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='q';d.id='q'+i;
+    d.innerHTML='<h3>'+(i+1)+'. '+esc(q.q)+'</h3>'+q.opts.map((o,j)=>'<label><input type="radio" name="q'+i+'" value="'+j+'"> <span>'+esc(o.t)+'</span></label>').join('')+'<div class="why" hidden></div>';
+    box.appendChild(d);
+  });
+  $('#submit').hidden=false;$('#submit').disabled=false;$('#result').innerHTML='';
+}
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function submit(){
+  const name=$('#name').value.trim();
+  if(!name){alert('Please type your name at the top of the quiz first.');$('#name').focus();return}
+  const unanswered=current.findIndex((q,i)=>!document.querySelector('input[name=q'+i+']:checked'));
+  if(unanswered>=0){alert('Please answer every question. Question '+(unanswered+1)+' is still blank.');$('#q'+unanswered).scrollIntoView({behavior:'smooth',block:'center'});return}
+  let score=0;
+  current.forEach((q,i)=>{
+    const pick=+document.querySelector('input[name=q'+i+']:checked').value;
+    const ok=q.opts[pick].correct; if(ok)score++;
+    const d=$('#q'+i); d.classList.add(ok?'right':'wrong');
+    d.querySelectorAll('input').forEach(x=>x.disabled=true);
+    const w=d.querySelector('.why'); w.hidden=false;
+    const right=q.opts.find(o=>o.correct).t;
+    w.innerHTML=(ok?'<b>Correct.</b> ':'<b>Not quite.</b> The answer is: <b>'+esc(right)+'</b>. ')+esc(q.why);
+  });
+  attempt++; store('osc-attempts-'+PART.slug,attempt);
+  const pct=Math.round(score/N*100), passed=score/N>=PASS;
+  $('#submit').hidden=true;
+  const r=$('#result');
+  if(passed){
+    const when=new Date().toLocaleString('en-HK',{dateStyle:'medium',timeStyle:'short'});
+    store('osc-pass-'+PART.slug,{name,pct,when,attempt});
+    r.innerHTML='<div class="result pass"><div class="score">'+pct+'% \u2014 Passed</div><p>Well done. Read through the explanations below, then show this certificate to your parent.</p><div class="cert"><div class="kicker">Certificate of completion</div><h2 style="margin:.3em 0">'+esc(PART.title)+'</h2><p><b>'+esc(name)+'</b> scored <b>'+score+'/'+N+'</b> on attempt '+attempt+'<br>'+when+'</p></div></div>';
+  }else{
+    r.innerHTML='<div class="result fail"><div class="score">'+pct+'% \u2014 Not yet</div><p>You need at least 80% (16 out of 20) to pass. Read the explanations below and the guide above, then try again. You will get a new set of questions.</p><button onclick="retry()">Try again with new questions</button></div>';
+  }
+  r.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function retry(){build();$('#quiz').scrollIntoView({behavior:'smooth'})}
+function ready(){
+  const c=$('#watched');
+  const sync=()=>{$('#start').disabled=!c.checked};c.addEventListener('change',sync);sync();
+  $('#start').onclick=()=>{$('#quizArea').hidden=false;$('#start').parentElement.hidden=true;build();$('#quizArea').scrollIntoView({behavior:'smooth'})};
+  $('#submit').onclick=submit;
+  const prev=store('osc-pass-'+PART.slug); if(prev&&prev.name)$('#name').value=prev.name;
+}
+document.addEventListener('DOMContentLoaded',ready);
+</script></body></html>
